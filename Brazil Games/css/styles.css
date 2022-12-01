@@ -1,0 +1,757 @@
+
+/******* 0 Variavel   ***********/
+
+:root {
+	--ff-primary: "Cairo", sans-serif;
+	
+	--clr-background: 	#F5F5F5;
+	--clr-white: 		#F1FCDE;
+	--clr-black: 		#090E01;
+	--clr-light-blue: 	#a1bfff;
+	--clr-medium-blue: #4686d3;
+	--clr-dark-blue: 	#006aff;
+	
+	--spacing: 0.25rem;
+	--transition: all 0.2s linear;
+	--dark-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+/******* 1. Geral  ***********/
+
+
+body {
+	font-size: var(--ff-primary);
+	background: var(--clr-background);
+	
+} 
+
+
+
+
+
+/******* 2. Navbar   ***********/
+
+
+
+.navbar-header_logo { /* LOGO ***/
+	width: 15rem;
+	height: 9rem;
+}
+
+
+.navbar { /* BOX DA NAV-BAR ***/
+	background: #1b325f;
+	width: 100%;
+	box-shadow: var(--dark-shadow);
+}
+
+
+
+.navbar-header_toggle {
+	background: transparent;
+	border: transparent;
+	font-size: 3.2rem;
+	color: var(--clr-medium-blue);
+	cursor: pointer;
+	transition: var(--transition)
+	
+}
+
+.navbar-header_toggle:hover { /* EFEITO ***/
+	transform : scale (1.2);
+}
+
+.navbar-list_link {  /* OPÇOES DESTAQUES LANCAMENTOS PLATAFORMAS ETC */
+	display: block;
+	font-size: 25px;
+	font-weight: 600;
+	padding: 1.6rem;
+	color: white;
+	font-family: var(--ff-primary);
+	text-decoration: none;
+}
+
+
+.navbar-list_link:hover { /* EFEITO ***/
+	background: var(--clr-medium-blue);
+	padding-left: 3.6rem;
+}
+
+.navbar-list { /* EFEITO ***/
+	height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+}
+
+.navbar-list--show-links {  /* aparecer e desaparecer menu nav */
+	height: 25rem;
+}
+
+
+
+/* 2.1 SEARCH BAR */ 
+
+
+
+.search {
+  width: 300px;
+  position: relative;
+  display: flex;
+
+}
+
+searchTerm {
+	width: 100%;
+	border: 3px solid #00B4CC;
+	border-right: none;
+	padding: 5px;
+	height: 20px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	color: #9DBFAF;
+  }
+  
+
+  .search input  {
+	font-family: var(--ff-primary);
+	font-weight: 400;
+  }
+
+  .searchTerm  {
+	width: 300px;
+	
+
+  }
+  
+  .searchTerm:focus{
+	color: #00B4CC;
+  }
+  
+  .searchButton {
+	width: 40px;
+	height: 36px;
+	border: 1px solid var(--clr-dark-blue);
+	background: var(--clr-dark-blue);
+	text-align: center;
+	color: #fff;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
+
+  }
+  
+
+
+
+
+
+/* 3. RESPONSIVIDADE ***/
+
+@media screen and (min-width: 900px) {   /* tudo as regras so serao ativadas nessas config */
+
+	.navbar-header_toggle {
+		display: none;
+	}
+
+	.navbar-list {
+		height: auto;
+		display: flex;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: .8rem 1.6rem;
+	}
+
+
+	.navbar-list_link:hover {
+		background: none;
+		padding-left: 1.6rem;
+		color: var(--clr-medium-blue);
+	}
+
+
+
+}
+
+/* MAIN *****************************************************************************************************************************************************/
+
+
+/* 3. Lancamentos ***/
+
+.container-fluid {
+	display: flex;
+	direction: row;
+
+}
+
+
+
+/****   4.0 Lancamentos************    */
+
+
+
+.container-lancamento {   /* header */
+	padding: 30px 20px ;
+	background-color: #fff;
+	
+	
+	
+}
+
+ 
+.header-lancamento { /* header */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between; 
+}
+
+.input-lancamento { /* input */
+	display: flex;
+	gap: 20px;
+}
+
+.input-lancamento input { /* input */
+	width: 250px;
+}
+
+
+.header-lancamento h2 { /* header */
+	font-size: 40px;
+	font-family: var(--ff-primary);
+	font-weight: 800;
+	padding-left: 5%;
+	
+}
+
+/****   4.1 Games Lancamentos************    */
+
+.imagem-lancamento{
+	width: 100%;
+	height: 100%;
+
+}
+
+.games-lancamento {
+
+	padding: 5%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr ; /* 1fr */
+	
+	
+}
+
+
+
+.games-header {
+	
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.games-header h1 {
+	font-family: var(--ff-primary);
+	font-size: 35px;
+	
+
+}
+
+
+.card h3 {
+	margin-top: 30px;
+	font-family: var(--ff-primary);
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+
+}
+
+@media screen and (max-width: 900px) {    /****   RESPONSIVIDADE ************    */
+	
+	.games-lancamento {
+		padding: 1%;
+		display: grid;
+		grid-template-columns: 1fr ; 
+		
+	}
+	
+	.informaçoes-destaque  { 
+		font-size: 3.5rem;
+		font-family: var(--ff-primary);
+		font-weight: 600;
+		display: inline-block;
+		align-items: left;
+	}
+	
+	
+	.video-destaque iframe{
+		width: 100%;
+		height: 200px;
+	
+	}
+
+
+
+.header-lancamento { /* header */
+	display: flex;
+	justify-content: center;
+}
+
+
+.games-header {
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+
+
+}
+
+
+/* 3. Destaque ***/
+
+
+.container {
+	margin-top: 30px;
+
+	
+}
+
+
+.titulo-topo { /* TITULO DESTAQUE ***/
+	font-size: 5rem;
+	font-family: var(--ff-primary);
+	font-weight: 800;
+	text-align: center;
+}
+
+
+.titulo-destaque {
+	margin-top: 50px;
+}
+
+.informaçoes-destaque  { /* NOME DO JOGO trocar flex direction colunm ***/
+	display: flex;
+	flex-direction: row;
+	font-size: 3.5rem;
+	font-family: var(--ff-primary);
+	font-weight: 600;
+}
+
+
+ .informaçoes-destaque h2 { 
+	text-align: center;
+	
+} 
+
+.video-destaque iframe{
+	width: 700px;
+	height: 400px;
+}
+
+
+.titulo-jogo {
+	width: 100%;
+	height: 100%;
+	padding: 0 30px;
+}
+
+
+
+
+/* 3.1 Mini textos informaçoes ***************************/
+
+.textos-destaque  {  /* CONFIGURACAO DA CAIXA TODA ***/
+	font-size: 40%;
+	font-family: var(--ff-primary);
+	font-weight: 300;
+	padding-top: 30px;
+	
+}
+.textos-destaque b{
+	font-weight: bold
+}
+
+.texto-info b  {   /* NEGRITO ***/
+	font-weight: bold
+}
+
+.texto-info {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;	
+	gap: 50px;
+
+}
+
+
+
+
+
+
+
+
+
+/****   Plataformas ***********    */
+
+
+.container-plataforma {
+	display: flex;
+	background-color:  #1b325f;
+	padding: 3.5rem;
+	
+}
+
+
+
+.header-plataforma {
+	font-size: 30px;
+	font-family: var(--ff-primary);
+	font-weight: 800;
+	color: white;;
+	
+	
+}
+
+
+
+.card-plataforma {
+	padding: 60px;
+}
+
+
+
+.plataforma {
+	text-align: center;
+	justify-content: center;
+	cursor: pointer;
+	box-shadow: var(--dark-shadow);
+	margin-top: 3.5rem;
+	
+
+}
+
+.imagem-lancamento a {
+	display: flex;
+	justify-content: center;
+}
+
+.plataforma h3 {
+	font-family: var(--ff-primary);
+	font-size: 30px;
+	font-weight: 600;
+	padding: 1rem;
+	color: white;
+}
+
+.detalhes-plataforma {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.detalhes-plataforma b {
+	font-weight: bold;
+}
+
+.imagem-plataforma {
+	height: 250px;
+}
+
+.plataforma h2 {
+	font-family: var(--ff-primary);
+	font-size: 27px;
+	font-weight: 400;
+	padding: 1rem;
+	color: white;
+
+}
+
+.plataforma p {
+	font-family: var(--ff-primary);
+	font-size: 15px;
+	font-weight: 400;
+	color: white;
+	
+
+}
+
+.detalhes-plataforma {
+	display: flex;
+	
+	justify-content: right;
+}
+
+.detalhes-plataforma p {
+	font-family: var(--ff-primary);
+	font-size: 15px;
+	font-weight: 700;
+	color: white;
+
+}
+
+
+ 
+  @media screen and (max-width: 900px) { /****   RESPONSIVIDADE ************    */
+
+	.container-plataforma {
+		display: inline-block;
+		background-color: gainsboro;
+		width: 100%;
+		
+
+		
+	}
+	
+
+
+
+
+  }  
+
+
+
+ 
+
+
+
+
+/****   Sobre ***********    */
+
+
+
+footer {
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	height: 200px;
+
+}
+
+.container-sobre {
+	margin-left: 15rem;
+	margin-right: 15rem;
+}
+
+
+.header-sobre {
+	font-size: 3rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	margin-right: 450px;
+	
+}
+
+
+
+.texto-sobre {
+	font-size: 1.5rem;
+	display: flex;
+	padding-top: 3rem;
+	width: 70rem;
+}
+
+
+.texto-editorial {
+	display: flex;
+	justify-content: space-around;
+	margin-left: 80rem;
+
+
+}
+
+.texto-editorial li {
+	font-size: 2rem
+}
+
+
+.icon-editorial h2 {
+	font-size: 1.5rem;
+}
+
+
+.sobre {
+	width: 70%;
+	height: auto;
+	padding: 30px;
+	
+}
+
+.editorial {
+	width: 45%;
+	height: auto;
+	padding: 30px;
+
+}
+
+.sobre h1 {
+	font-family: var(--ff-primary);
+	font-size: 3.2rem;
+	
+}
+
+.editorial h1 {
+	font-family: var(--ff-primary);
+	font-size: 3.2rem;
+}
+
+.sobre p {
+	font-family: var(--ff-primary);
+	font-size: 1.5rem;
+	padding-top: 3rem;
+
+}
+
+
+
+
+.editorial h2{
+	font-family: var(--ff-primary);
+	font-size: 2.5rem;
+	padding-top: 30px;
+	display: flex;
+	
+}
+
+
+.editorial b{
+	font-family: var(--ff-primary);
+	font-size: 1.5rem;
+	font-weight: bolder;
+	padding-top: 20px;
+}
+
+.editorial h3{
+	font-family: var(--ff-primary);
+	font-size: 1.5rem;
+	font-weight: 300;
+	padding-top: 20px;
+}
+
+
+
+.icon-editorial ul {
+	display: flex;
+	flex-direction: row;
+	
+}
+
+.icon-editorial img {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+}
+
+
+/****   DIREITOS AUTORAIS FINAIS  ****************************************    */
+
+
+
+
+.container-cop {
+	padding-left: 5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color:  #1b325f;
+	margin-top: 10rem;
+	height: 100%;
+	width: 100%;
+	justify-content: space-between;
+
+}
+
+
+.texto-cop {
+	font-size: 20px;
+	font-family: var(--ff-primary);
+	font-weight: 400;
+	color: white;
+}
+
+.logo-cop img {
+    margin-right: 15rem;
+	width: 200px;
+	height: 100px;
+	
+}
+
+
+
+
+
+@media screen and (max-width: 900px) { /****   RESPONSIVIDADE ************    */
+
+	footer {
+		height: 100%;
+		width: 100%;
+		display: inline;
+		text-align: center;
+	}
+
+	.sobre  {
+		margin-left: 8rem;
+	}
+
+	.editorial{
+		margin-left: 13rem;
+	padding-top: 50px;
+	}
+
+	.editorial img {
+		margin-left: 1.5rem;
+	}
+
+
+
+	.container-cop {
+	
+		padding:3rem;
+		display: flex;
+		flex-direction: column;
+		background-color:  gainsboro;
+		height: 100%;
+		width: 100%;
+
+	
+	}
+
+	.logo-cop img {
+		margin-right: 2rem;
+		width: 100px;
+		height: 80px;
+	}
+	
+	
+	html {
+		overflow-x: hidden;
+	} 
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
