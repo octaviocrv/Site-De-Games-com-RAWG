@@ -1,5 +1,8 @@
 <h1 align="center"> Portal de Games • RAWG API </h1>
 
+<img width="1360" height="649" alt="image" src="https://github.com/user-attachments/assets/bdea75e0-7afe-49df-91e9-5a871a53ca17" />
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
@@ -33,14 +36,3 @@ O projeto demonstra a capacidade de consumir APIs públicas, manipular o DOM din
 - **JavaScript (ES6+)** — Lógica central da aplicação, manipulação de interface e passagem de parâmetros via URL.
 - **Fetch API** — Consumo assíncrono dos endpoints fornecidos pela RAWG API.
 - **RAWG API** — Banco de dados robusto de videogames utilizado como fonte da verdade para o catálogo.
-
----
-
-## Como rodar localmente
-
-Este projeto foi construído no lado do cliente (Client-side), dispensando configurações complexas de servidor.
-
-1. Clone este repositório para o seu ambiente local:
-```bash
-git clone [https://github.com/octaviocrv/Site-De-Games-com-RAWG.git](https://github.com/octaviocrv/Site-De-Games-com-RAWG.git)
-cd Site-De-Games-com-RAWG
