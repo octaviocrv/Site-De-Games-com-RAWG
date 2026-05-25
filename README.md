@@ -1,31 +1,46 @@
-# Site-De-Games-com-RAWG
-Portal de Games integrado com a API RAWG
+<h1 align="center"> Portal de Games • RAWG API </h1>
 
-Site-De-Games-com-RAWG/
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/RAWG_API-000000?style=for-the-badge&logo=json&logoColor=white" alt="RAWG API" />
+</p>
 
-Portal de Games integrado com a API RAWG
+> Plataforma interativa para exploração, busca e detalhamento de jogos digitais, construída através do consumo da RAWG Video Games Database API.
 
-Nesse trabalho, vamos dar vida ao layout desenvolvido no trabalho anterior, apresentando informações reais sobre games, plataformas, creators, publishers e outras possibilidades ligadas ao universo de jogos digitais. Todas estas informações serão obtidas dinamicamente a partir da integração com a RAWG Video Games Database API Links to an external site..
+## Sobre o Projeto
 
-IMPORTANTE: O trabalho agora tem foco exclusivamente na apresentação de informações sobre jogos digitais e você, OBRIGATORIAMENTE, deve utilizar esta API para o trabalho. NÃO SERÃO ACEITOS TRABALHOS COM OUTRA TEMÁTICA E COM OUTRA API.
+O **Portal de Games** é uma aplicação web voltada para aficionados pelo universo dos jogos digitais. O objetivo principal do projeto é apresentar informações reais e dinâmicas sobre games, plataformas, desenvolvedores e lojas, integrando diretamente com um ecossistema de dados externo via endpoints RESTful.
 
-A RAWG API oferece diversas funcionalidades por meio de endpoints no padrão RESTful. Você precisará criar uma conta no site RAWG.io Links to an external site. para receber a uma chave (API Key) que será utilizada em todas as requisições.
+O projeto demonstra a capacidade de consumir APIs públicas, manipular o DOM dinamicamente com JavaScript Vanilla e estruturar um layout responsivo e agradável para exibição de catálogos de produtos.
 
-Neste trabalho, pode-se evoluir o layout do portal de games do trabalho anterior ou começar um projeto de layout do zero. Essa decisão fica a cargo de cada um. Você deverá montar um layout sobre jogos e apresentar funcionalidades para os seus usuários que são pessoas aficionadas pelo universo de jogos digitais.
+---
 
-Dentre os endpoints providos pela RAWG API, destacamos os seguintes que podem ser utilizados no seu projeto:
+## Principais Funcionalidades
 
-Games Links to an external site.- (OBRIGATÓRIO) fornece um conjunto rico de informações sobre cada um dos jogos digitais cobertos pela API tais como plataformas, lojas, gêneros, screenshots, tags, entre outras; Creators Links to an external site.- fornece uma lista das pessoas por trás da criação de jogos digitais, com detalhes do seu papel no processo e os jogos em que estão envolvidos; Developers Links to an external site.- fornece informações sobre as empresas que desenvolvem jogos, os jogos associados e seus detalhes; Plataformas Links to an external site.- fornece a lista das plataformas possíveis para jogar; Lojas Links to an external site.- fornece a lista de locais onde se pode adquirir os jogos digitais..
+- **Catálogo Dinâmico (Home):** Listagem automatizada de jogos utilizando o endpoint `/games` da API, exibindo imagem de capa (background) e dados textuais principais (nome, data de lançamento e avaliação).
+- **Sessão Exploratória Secundária:** Exibição de dados adicionais do universo gamer (como criadores, plataformas, publishers ou gêneros) obtidos através de requisições paralelas.
+- **Página de Detalhamento:** Roteamento dinâmico que captura o ID do jogo na URL e realiza uma nova requisição para buscar e renderizar informações profundas e específicas do título selecionado.
+- **Motor de Busca Integrado:** Sistema de pesquisa que permite ao usuário buscar títulos específicos, retornando uma lista de resultados atualizada em tempo real a partir da API.
+- **Design Responsivo:** Interface adaptada para visualização otimizada em dispositivos móveis e desktops.
 
-Requisitos do Projeto O site que você fará deve atender aos seguintes requisitos:
+---
 
-o site deve ser publicado em um ambiente da Internet (Repl.it, GitHub Pages, Netlify ou outro a sua escolha); o site deve trazer dados do aluno tais como seu nome completo, curso e número de matrícula, OBRIGATORIAMENTE visíveis na Home-Page; o site deverá ser responsivo permitindo a visualização em um celular de forma adequada; o site deve ter uma Home-Page (index.html) com duas (2) seções com dados dinâmicos obtidos via RAWG API. Uma seção deve, OBRIGATORIAMENTE, trazer uma lista de jogos digitais utilizando o endpoint GAMES Links to an external site.. Na primeira seção da Home-Page, você deve mostrar uma lista de jogos obedecendo os seguintes requisitos: para cada game deve ser exibidos um mínimo de três (3) dados textuais obtidos por meio da API que descrevam sucintamente o referido item (Ex: nome, data de liberação, rating, etc); para cada game, deve ser exibida uma imagem ilustrativa (background); para cada game, deve haver um link que leve o usuário para uma Página de Detalhes (detalhes.html) que exibirá mais informações sobre o game. O id do game, obtido via API deve ser passado como parâmetro na URL da página de detalhes conforme mostrado nas aulas síncronas realizadas na Semana 11. Na segunda seção (adicional) da Home-Page, você deve mostrar uma lista associada a outra informação fornecida pela API como: creators, plataformas, publishers, lojas, gêneros, etc. o site deve apresentar uma Página de pesquisa (pesquisa.html) de games ou a funcionalidade integrada no cabeçalho da home-page, que permita ao usuário informar um texto e obter, como resultado da pesquisa, a lista de games associados a partir da RAWG API. Na página de resultados da pesquisa, devem ser obedecidos os seguintes requisitos: o resultado da pesquisa poderá ser paginado ou não; 
-o resultado deve mostrar uma lista de games tal qual a home-page com imagem e textos que descrevam os games retornado; na apresentação de cada game do resultado da pesquisa deve ter um link que, ao ser acionado, leve o usuário para a Página de Detalhes (detalhes.html) onde são exibidas mas informações sobre o game.
+## Tecnologias Utilizadas
 
+- **HTML5 & CSS3** — Estruturação semântica e estilização completa da interface visual.
+- **JavaScript (ES6+)** — Lógica central da aplicação, manipulação de interface e passagem de parâmetros via URL.
+- **Fetch API** — Consumo assíncrono dos endpoints fornecidos pela RAWG API.
+- **RAWG API** — Banco de dados robusto de videogames utilizado como fonte da verdade para o catálogo.
 
-# :hammer: Funcionalidades do projeto
+---
 
-- `Funcionalidade 1`: Integrar com a API
-- `Funcionalidade 2`: o site deve ser publicado em um ambiente da Internet (Repl.it, GitHub Pages, Netlify ou outro a sua escolha); o site deve trazer dados do aluno 
-- `Funcionalidade 2a`: Link que leve o usuário para uma Página de Detalhes (detalhes.html)
-- `Funcionalidade 3`: Mostrar uma lista de jogos obedecendo os seguintes requisitos: para cada game deve ser exibidos um mínimo de três (3) 
+## Como rodar localmente
+
+Este projeto foi construído no lado do cliente (Client-side), dispensando configurações complexas de servidor.
+
+1. Clone este repositório para o seu ambiente local:
+```bash
+git clone [https://github.com/octaviocrv/Site-De-Games-com-RAWG.git](https://github.com/octaviocrv/Site-De-Games-com-RAWG.git)
+cd Site-De-Games-com-RAWG
